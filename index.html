@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="manifest" href="/manifest.json">
+        <title>PWA Image Grid</title>
+    </head>
+    <body>
+        <header>
+            <h1>PWA Image Grid</h1>
+        </header>
+        <main id="image-grid"></main>
+        <script src="main.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('service-worker.js')
+                .then((registration) => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                    console.log('Service Worker registration failed:', error);
+                })
+            }
+        </script>
+    </body>
+</html>
