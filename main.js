@@ -79,11 +79,9 @@ const history = [
 ];
 
 history.forEach((occurance) => {
-    const div = document.createElement('div')
-
-    const span1 = document.createElement('div')
-    const span2 = document.createElement('div')
-    const span3 = document.createElement('div')
+    const div = document.createElement('div');
+    const span1 = document.createElement('div');
+    const span2 = document.createElement('div');
     div.textContent = occurance.designation;
     span1.textContent = occurance.company;
     span2.textContent = occurance.period;
