@@ -37,6 +37,20 @@
                     console.log('Service Worker registration failed:', error);
                 })
             }
+            // checking for camera
+            checkMediaAccess = async() => {
+                navigator.mediaDevices.enumerateDevices().then( devices => 
+                    devices.forEach( device => {
+                        if(device.kind == 'audioinput' && device.label) var audio = 'Has Audio Access';
+                        if(device.kind == 'videoinput' && device.label) var video = 'Has Video Access';
+                    }
+                ));
+            }
         </script>
+        <hr>
+        {{audio}}
+        <hr>
+        {{video}}
+        <hr>
     </body>
 </html>
