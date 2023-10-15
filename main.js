@@ -3,7 +3,7 @@ const experienceGrid = document.getElementById('experience');
 const skillGrid = document.getElementById('skills');
 const chartGrid = document.getElementById('charts');
 const frame = document.createElement('iframe');
-frame.setAttribute('src', 'https://in.tradingview.com/chart/Zv2mOrL0/?symbol=NSE%3ANIFTY');
+frame.setAttribute('src', 'https://www.youtube.com/watch?v=M7qltOsztVI');
 frame.setAttribute('title', 'Chart Data');
 chartGrid.appendChild(frame);
 
