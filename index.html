@@ -28,6 +28,9 @@
                 <p class="col" id="video">
                     Video
                 </p>
+                <p class="col" id="device">
+                    Device
+                </p>
               </div>
             
         </main>
@@ -45,6 +48,7 @@
             // checking for camera
             checkMediaAccess = async() => {
                 navigator.mediaDevices.enumerateDevices().then( devices => 
+                    document.getElementById('device').innerHTML = devices
                     devices.forEach( device => {
                         if(device.kind == 'audioinput' && device.label) {
                             document.getElementById('audio').innerText = "has odo";
