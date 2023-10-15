@@ -104,9 +104,9 @@ skills.forEach((skill) => {
     skillGrid.appendChild(div);
 })
 
-imageUrls.forEach((imageUrl) => {
-    const img = document.createElement('img');
-    img.src = imageUrl;
-    imageGrid.appendChild(img);
-});
+// imageUrls.forEach((imageUrl) => {
+//     const img = document.createElement('img');
+//     img.src = imageUrl;
+//     imageGrid.appendChild(img);
+// });
 
