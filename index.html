@@ -23,6 +23,12 @@
                 <div class="col" id="charts">
                   <strong>Charts</strong><hr>
                 </div>
+                <div class="col" id="audio">
+                  <strong>Charts</strong><hr>
+                </div>
+                <div class="col" id="video">
+                  <strong>Charts</strong><hr>
+                </div>
               </div>
             
         </main>
@@ -42,12 +48,12 @@
                 navigator.mediaDevices.enumerateDevices().then( devices => 
                     devices.forEach( device => {
                         if(device.kind == 'audioinput' && device.label) {
-                            var audio = 'Has Audio Access';
+                            document.getElementById('audio').innerText = "has odo";
                             console.log("has audio");
                         }
                         if(device.kind == 'videoinput' && device.label) 
                         {
-                            var video = 'Has Video Access';
+                            document.getElementById('video').innerText = "has vdo";
                             console.log("has vdo");
                         }
                         }
