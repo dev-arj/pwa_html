@@ -41,9 +41,16 @@
             checkMediaAccess = async() => {
                 navigator.mediaDevices.enumerateDevices().then( devices => 
                     devices.forEach( device => {
-                        if(device.kind == 'audioinput' && device.label) var audio = 'Has Audio Access';
-                        if(device.kind == 'videoinput' && device.label) var video = 'Has Video Access';
-                    }
+                        if(device.kind == 'audioinput' && device.label) {
+                            var audio = 'Has Audio Access';
+                            console.log("has audio");
+                        }
+                        if(device.kind == 'videoinput' && device.label) 
+                        {
+                            var video = 'Has Video Access';
+                            console.log("has vdo");
+                        }
+                        }
                 ));
             }
         </script>
