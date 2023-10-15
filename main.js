@@ -1,6 +1,11 @@
 const imageGrid = document.getElementById('image-grid');
 const experienceGrid = document.getElementById('experience');
 const skillGrid = document.getElementById('skills');
+const chartGrid = document.getElementById('charts');
+const frame = document.createElement('iframe');
+frame.setAttribute('src', 'https://in.tradingview.com/chart/Zv2mOrL0/?symbol=NSE%3ANIFTY');
+frame.setAttribute('title', 'Chart Data');
+chartGrid.appendChild(frame);
 
 const imageUrls = [
     'images/car-1.jpg',
