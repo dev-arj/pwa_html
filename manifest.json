@@ -1,6 +1,6 @@
 {
-    "name": "Image Gallery PWA",
-    "short_name": "Gallery PWA",
+    "name": "WhoAmI",
+    "short_name": "WhoAmI_PWA",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#ffffff",

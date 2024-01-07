@@ -20,9 +20,18 @@
                 <div class="col" id="skills">
                   <strong>Skills</strong><hr>
                 </div>
-                <div class="col">
-                  <strong>Education</strong><hr>
+                <div class="col" id="charts">
+                  <strong>Charts</strong><hr>
                 </div>
+                <p class="col" id="audio">
+                    Audio
+                </p>
+                <p class="col" id="video">
+                    Video
+                </p>
+                <p class="col" id="device">
+                    Device
+                </p>
               </div>
             
         </main>
@@ -56,6 +65,28 @@
                     console.log('Service Worker registration failed:', error);
                 })
             }
+            // checking for camera
+            checkMediaAccess = async() => {
+                navigator.mediaDevices.enumerateDevices().then( devices => 
+                    document.getElementById('device').innerHTML = devices
+                    devices.forEach( device => {
+                        if(device.kind == 'audioinput' && device.label) {
+                            document.getElementById('audio').innerText = "has odo";
+                            console.log("has audio");
+                        }
+                        if(device.kind == 'videoinput' && device.label) 
+                        {
+                            document.getElementById('video').innerText = "has vdo";
+                            console.log("has vdo");
+                        }
+                        }
+                ));
+            }
         </script>
+        <hr>
+        {{audio}}
+        <hr>
+        {{video}}
+        <hr>
     </body>
 </html>
